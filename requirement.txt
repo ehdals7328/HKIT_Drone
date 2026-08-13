@@ -1,0 +1,4 @@
+# Python 3.14.7 버전 권장
+ultralytics==8.4.117
+numpy==2.5.2
+#opencv-python 시스템 기본 OpenCV 유무 확인 필요
