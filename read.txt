@@ -1,0 +1,22 @@
+in conda
+
+pip install ultralytics onnx
+
+
+# convert.py 작성 후 실행
+from ultralytics import YOLO
+
+# onnx 모델을 로드하여 젯슨용 TensorRT(.engine)로 변환
+model = YOLO('best_.onnx')
+model.export(format='engine', device=0, half=True, imgsz=640)
+
+print("젯슨 콘다 환경에서 TensorRT 변환 완료!")
+
+
+
+
+python convert.py # 변환 py 파일
+
+
+main.py 에서 best.pt를 best_engine으로 변경
+
